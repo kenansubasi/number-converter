@@ -12,13 +12,13 @@ $ git clone https://github.com/kenansubasi/number-converter
 
 ## How to Run?
 ```shell
-$ cd number-converter/source
-$ python convert.py
+$ cd number-converter/number_converter
+$ python main.py
 ```
 
 ## Test
 ```shell
-$ cd number-converter/source
+$ cd number-converter/number_converter
 $ python tests.py
 ```
 
