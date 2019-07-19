@@ -12,6 +12,8 @@ def main():
             if number.isdigit() is True:
                 if len(number) > 21:
                     print("\n\033[1;32;91mPlease enter a value less than {number}!\033[0;37;40m".format(number=10**21))
+                elif len(number) > 1 and number.startswith("0"):
+                    print("\n\033[1;32;91mThe value you entered is incorrect!\033[0;37;40m")
                 else:
                     break
             else:
