@@ -30,6 +30,10 @@ $ python tests.py
 * The module will be added to convert the number into English text.
 
 
+## Flow Diagram
+![Flow Diagram](media/images/flow-diagram.png)
+
+
 ## Screenshots
 ![Console](media/images/console-example.png)
 
