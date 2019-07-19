@@ -14,7 +14,7 @@ class TestNumber(unittest.TestCase):
         """
 
         # 0 - 999
-        with open("data/turkish_test_data_hundred.txt", "r") as f:
+        with open("data/turkish/test_data_hundred.txt", "r") as f:
             data = f.read().splitlines()
 
         for number in range(0, 1000):
@@ -22,20 +22,20 @@ class TestNumber(unittest.TestCase):
             turkish_text.convert_to_text()
             self.assertEqual(turkish_text.text, data[number])
 
-        # 1000 - 29999
-        with open("data/turkish_test_data_thousand.txt", "r") as f:
+        # 1000 - 111000
+        with open("data/turkish/test_data_thousand.txt", "r") as f:
             data = f.read().splitlines()
 
-        for number in range(1000, 30000):
+        for number in range(1000, 111001):
             turkish_text = TurkishText(number)
             turkish_text.convert_to_text()
             self.assertEqual(turkish_text.text, data[number-1000])
 
-        # 1000000 - 1029999
-        with open("data/turkish_test_data_million.txt", "r") as f:
+        # 1000000 - 1111000
+        with open("data/turkish/test_data_million.txt", "r") as f:
             data = f.read().splitlines()
 
-        for number in range(1000000, 1029999):
+        for number in range(1000000, 1111001):
             turkish_text = TurkishText(number)
             turkish_text.convert_to_text()
             self.assertEqual(turkish_text.text, data[number-1000000])
