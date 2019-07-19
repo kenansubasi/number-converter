@@ -11,7 +11,7 @@ def main():
             number = input("\nPlease enter a number: ")
             if number.isdigit() is True:
                 if len(number) > 21:
-                    print("\n\033[1;32;91mPlease enter a value less than {number}!\033[0;37;40m".format(number=10**22))
+                    print("\n\033[1;32;91mPlease enter a value less than {number}!\033[0;37;40m".format(number=10**21))
                 else:
                     break
             else:

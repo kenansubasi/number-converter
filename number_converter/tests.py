@@ -16,7 +16,7 @@ class TestNumber(unittest.TestCase):
         with open("data/turkish_test_data.txt", "r") as f:
             data = f.read().splitlines()
 
-        for number in range(0, 21000):
+        for number in range(0, 30000):
             turkish_text = TurkishText(number)
             turkish_text.convert_to_text()
             self.assertEqual(turkish_text.text, data[number])
