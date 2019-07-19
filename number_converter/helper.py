@@ -88,7 +88,7 @@ class TurkishText(NumberHelper):
             if value == "0":
                 pass
             elif index == 0:
-                if not (len_number_part == 1 and value == "1" and step == 1):
+                if not ((len_number_part == 1 and value == "1" or number_part == "100") and step == 1):
                     part_text = self.digit_values.get(value, "") + part_text
             elif index == 1:
                 part_text = self.digit_values.get(value + "0", "") + part_text
