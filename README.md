@@ -23,11 +23,11 @@ $ python tests.py
 ```
 
 ## Features
-* The number entered is converted into Turkish.
+* The number entered is converted into Turkish text.
 
 
 ## Features to be added in the future
-* English convert will be added.
+* The module will be added to convert the number into English text.
 
 
 ## Screenshots

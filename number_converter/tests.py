@@ -13,25 +13,13 @@ class TestNumber(unittest.TestCase):
         It tests the Turkish text equivalent of the number.
         """
 
-        # 123
-        turkish_text = TurkishText(123)
-        turkish_text.convert_to_text()
-        self.assertEqual(turkish_text.text, "yüzyirmiüç")
+        with open("data/turkish_test_data.txt", "r") as f:
+            data = f.read().splitlines()
 
-        # 2145
-        turkish_text = TurkishText(2145)
-        turkish_text.convert_to_text()
-        self.assertEqual(turkish_text.text, "ikibinyüzkırkbeş")
-
-        # 15040
-        turkish_text = TurkishText(15040)
-        turkish_text.convert_to_text()
-        self.assertEqual(turkish_text.text, "onbeşbinkırk")
-
-        # 501147
-        turkish_text = TurkishText(501147)
-        turkish_text.convert_to_text()
-        self.assertEqual(turkish_text.text, "beşyüzbirbinyüzkırkyedi")
+        for number in range(0, 21000):
+            turkish_text = TurkishText(number)
+            turkish_text.convert_to_text()
+            self.assertEqual(turkish_text.text, data[number])
 
 
 if __name__ == "__main__":
